@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Hipolito Del Rosario - Portfolio</title>
+    <style>
+        :root {
+            --primary-red: #D32F2F;
+            --secondary-red: #F44336;
+            --light-red: #FFEBEE;
+            --dark: #212121;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #FFF5F5 0%, #FFFFFF 100%);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        nav {
+            background: linear-gradient(90deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            padding: 1.2rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        section {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            color: var(--primary-red);
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-red), var(--secondary-red));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 85vh;
+            justify-content: center;
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.1);
+            margin-top: 2rem;
+            padding: 3rem;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 6px solid var(--secondary-red);
+            object-fit: cover;
+            object-position: center 10%;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.2);
+        }
+
+        #home h1 {
+            color: var(--primary-red);
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        #about .content-grid, #projects .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        #about .card, #projects .project-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.1);
+            border-left: 5px solid var(--secondary-red);
+        }
+
+        #about .card h3, #projects .project-card h3 {
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        #contact {
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.1);
+            padding: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+            padding: 0.8rem;
+            border-radius: 10px;
+            background-color: var(--light-red);
+        }
+
+        .contact-item span {
+            font-weight: bold;
+            color: var(--primary-red);
+            min-width: 90px;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        #contact input, #contact textarea {
+            padding: 1rem;
+            border: 2px solid #FFCDD2;
+            border-radius: 10px;
+            font-size: 1rem;
+            background-color: #FFFBFB;
+        }
+
+        #contact button {
+            padding: 1rem;
+            background: linear-gradient(90deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul { gap: 1.5rem; }
+            #home h1 { font-size: 2.2rem; }
+            .profile-img { width: 250px; height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <img src="https://img.sanishtech.com/u/fae2d8f888c9f66b0537615614abe18a.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Ashley H. Del Rosario</h1>
+        <p>Highly motivated Information Technology student at Phinma Araullo University. Passionate about Cybersecurity and dedicated to solving real-world technical challenges.</p>
+    </section>
+
+    <section id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="content-grid">
+            <div class="card">
+                <h3>Background</h3>
+                <p>I'm Ashley, an IT student with a strong foundation from Camp Tinio National High School. I was recognized for my excellent performance and dedication.</p>
+            </div>
+            <div class="card">
+                <h3>Education</h3>
+                <p><strong>Tertiary:</strong> Phinma Araullo University<br>Bachelor of Science in Information Technology (2025-2026)</p>
+            </div>
+            <div class="card">
+                <h3>Skills & Interests</h3>
+                <p><strong>Skills:</strong> Communication, Active Listening, Computer Literacy, Planning & Organization, ICT Proficiency</p>
+                <p><strong>Interests:</strong> Cybersecurity, Web Design, Technology Trends</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-title">
+            <h2>Projects & Portfolio</h2>
+        </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Work Immersion Experience</h3>
+                <p>Completed internship at Camp Tinio National High School. Assisted in administrative tasks and managed digital files efficiently.</p>
+            </div>
+            <div class="project-card">
+                <h3>Academic Projects</h3>
+                <p>Created various academic outputs including presentations, documents, and basic web designs focusing on usability and aesthetics.</p>
+            </div>
+            <div class="project-card">
+                <h3>Skill Demonstration</h3>
+                <p>Demonstrated strong organizational and communication skills. Able to adapt quickly and deliver quality work within deadlines.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-title">
+            <h2>Contact Me</h2>
+        </div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>Email:</span> ashley.delrosario@example.com
+            </div>
+            <div class="contact-item">
+                <span>Facebook:</span> facebook.com/ashley.delrosario
+            </div>
+        </div>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
