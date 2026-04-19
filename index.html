@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Del Rosario | Portfolio</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary-red: #8B0000;
+            --secondary-red: #B22222;
+            --accent-red: #DC143C;
+            --light-red: #ffebee;
+            --text-dark: #2d2d2d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff9f9;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* HEADER STYLE */
+        header {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 50%, var(--accent-red) 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        /* NAVIGATION STYLE */
+        nav {
+            background-color: var(--primary-red);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: var(--primary-red);
+            font-weight: bold;
+            transform: translateY(-2px);
+        }
+
+        
+        section {
+            display: none; /* HIDDEN BY DEFAULT */
+            background: white;
+            margin: 30px auto;
+            padding: 35px;
+            max-width: 1000px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(220, 20, 60, 0.1);
+            border-top: 5px solid var(--accent-red);
+        }
+
+        
+        section:target {
+            display: block;
+        }
+
+        
+        #home {
+            display: block;
+        }
+
+        section h2 {
+            color: var(--primary-red);
+            border-bottom: 2px solid var(--light-red);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* IMAGE STYLE */
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--accent-red);
+            box-shadow: 0 0 25px rgba(220, 20, 60, 0.3);
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* LIST STYLE */
+        ul {
+            list-style: none;
+            line-height: 2;
+        }
+
+        ul li {
+            background: var(--light-red);
+            margin: 8px 0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-red);
+        }
+
+        
+        b {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        
+        .download-btn {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .download-btn a {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .download-btn a:hover {
+            background: var(--secondary-red);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+        }
+
+        /* FOOTER STYLE */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            color: white;
+            margin-top: 30px;
+            font-weight: 500;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 5px auto;
+                max-width: 200px;
+            }
+            
+            section {
+                margin: 20px;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ashley Hipolito Del Rosario</h1>
+    <p>Aspiring IT Student | Future Cybersecurity Specialist</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+<section id="home">
+    <h2>Home</h2>
+    <img src="profile.png" alt="Profile Picture" class="profile-img">
+    <p class="intro-text">Hello! I am Ashley, a highly motivated Information Technology student from Phinma Araullo University. I love learning about technology, solving problems, and exploring the world of cybersecurity.</p>
+    
+    <div class="download-btn">
+        <a href="files/resume.pdf" download>DOWNLOAD MY RESUME</a>
+    </div>
+</section>
+
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am Ashley Hipolito Del Rosario, an IT student based in Cabanatuan City. I graduated from Camp Tinio National High School where I received recognition for my performance in work immersion. I am passionate about technology, computers, communication, and continuous learning.</p>
+
+    <h3 style="color: var(--secondary-red); margin-top: 25px; font-size: 1.3em;">Personal Information</h3>
+    <ul>
+        <li><b>Address:</b> #525TH Camp Tinio, Cabanatuan City, Nueva Ecija</li>
+        <li><b>Contact No.:</b> 09553243352</li>
+        <li><b>Email:</b> mjashleydelrosario@gmail.com</li>
+        <li><b>Date of Birth:</b> June 22, 2006</li>
+        <li><b>Civil Status:</b> Single</li>
+        <li><b>Nationality:</b> Filipino</li>
+    </ul>
+</section>
+
+
+<section id="education">
+    <h2>Education</h2>
+    <ul>
+        <li><b>Tertiary:</b> Phinma Araullo University - BS Information Technology (2025-2026)</li>
+        <li><b>Secondary:</b> Camp Tinio National High School - HUMSS Strand, With Honors (2024-2025)</li>
+        <li><b>Elementary:</b> Camp Tinio Elementary School (2018-2019)</li>
+    </ul>
+
+    <h3 style="color: var(--secondary-red); margin-top: 25px; font-size: 1.3em;">Awards & Certifications</h3>
+    <ul>
+        <li>Best in Work Immersion - 2025</li>
+        <li>Outstanding Work Immersion Student - 2025</li>
+        <li>With Honors - 2024-2025</li>
+    </ul>
+</section>
+
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>Excellent Communication Skills</li>
+        <li>Active Listening & Interpersonal Skills</li>
+        <li>Highly Reliable and Responsible</li>
+        <li>Computer Literate (MS Word, Excel, PowerPoint)</li>
+        <li>Planning and Organizational Skills</li>
+        <li>ICT Skills & Computer Manipulation</li>
+    </ul>
+</section>
+
+
+<section id="projects">
+    <h2>Projects & Portfolio</h2>
+    <p style="margin-bottom: 15px;">Here are some of the works and activities I have accomplished:</p>
+    <ul>
+        <li><b>Personal Portfolio Website</b> - A responsive website showcasing my profile and skills.</li>
+        <li><b>School IT Activities</b> - Various programming and design projects completed during coursework.</li>
+        <li><b>UI/UX Design Concepts</b> - Creating user-friendly interfaces based on HCI principles.</li>
+    </ul>
+</section>
+
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p style="font-size: 1.1em;"><b>Email:</b> mjashleydelrosario@gmail.com</p>
+    <p style="font-size: 1.1em;"><b>Phone:</b> 09553243352</p>
+
+    <h3 style="color: var(--secondary-red); margin-top: 25px; font-size: 1.3em;">Character References</h3>
+    <ul>
+        <li><b>Mrs. Cristine Inovero</b> - Government Employee | 09268130298</li>
+        <li><b>Mrs. Jesica Benedicto</b> - Accountant | 09267714821</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2026 MJ Ashley Del Rosario | Personal Portfolio Website</p>
+</footer>
+
+</body>
+</html>
